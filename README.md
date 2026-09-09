@@ -11,13 +11,13 @@ The application displays:
 
 The goal of this project is to automate the following process:
 
--Provision AWS infrastructure using Terraform.
--Create an EC2 instance.
--Connect to the EC2 instance using SSH.
--Install Python and Flask.
--Copy the Flask application to the EC2 instance.
--Start the Flask application.
--Access the application through the EC2 public IP.
+- Provision AWS infrastructure using Terraform.
+- Create an EC2 instance.
+- Connect to the EC2 instance using SSH.
+- Install Python and Flask.
+- Copy the Flask application to the EC2 instance.
+- Start the Flask application.
+- Access the application through the EC2 public IP.
 
 Instead of manually configuring the EC2 server, Terraform automates the deployment process.
 
@@ -85,12 +85,12 @@ Web Browser
 
 Before running this project, following needs to be installed and configured:
 
--Terraform
--AWS CLI
--Git
--An AWS account
--An SSH key pair
--An AWS IAM user/role with appropriate permissions
+- Terraform
+- AWS CLI
+- Git
+- An AWS account
+- An SSH key pair
+- An AWS IAM user/role with appropriate permissions
 
 1. Verify Terraform:
     - `terraform --version`
@@ -109,7 +109,7 @@ Run `ssh -i ~/.ssh/id_rsa ubuntu@<EC2_PUBLIC_IP>`
 
 Check that the application exists:
 
-ls -l /home/ubuntu/app.py
+Run `ls -l /home/ubuntu/app.py`
 
 Start the application:
 
@@ -126,21 +126,21 @@ Expected output:
 
 This project helped me practice:
 
--Infrastructure as Code using Terraform
--AWS EC2 provisioning
--AWS networking fundamentals
--Security Groups
--SSH authentication
--Terraform connection blocks
--Terraform provisioners
--Remote command execution
--File provisioning
--Python Flask deployment
--Linux server administration
--Git and GitHub
--Troubleshooting application deployment issues
+- Infrastructure as Code using Terraform
+- AWS EC2 provisioning
+- AWS networking fundamentals
+- Security Groups
+- SSH authentication
+- Terraform connection blocks
+- Terraform provisioners
+- Remote command execution
+- File provisioning
+- Python Flask deployment
+- Linux server administration
+- Git and GitHub
+- Troubleshooting application deployment issues
 
 #### 👨‍💻 Author
 
-Kajal Prajapati
-DevOps / Cloud Engineering Learning Project
+- Kajal Prajapati
+- DevOps / Cloud Engineering Learning Project
