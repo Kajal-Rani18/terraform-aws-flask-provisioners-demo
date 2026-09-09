@@ -27,7 +27,7 @@ Instead of manually configuring the EC2 server, Terraform automates the deployme
                        |
                        |
                 AWS Security Group
-                  TCP Port 5000
+                  TCP Port 80
                        |
                        v
                 +---------------+
