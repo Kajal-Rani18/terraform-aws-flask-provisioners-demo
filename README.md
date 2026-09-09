@@ -1,28 +1,27 @@
-# terraform-aws-flask-provisioners-demo
-# Terraform Flask Application Deployment
 
-This project is intended as a hands-on DevOps learning project that uses Terraform to provision an AWS EC2 instance and deploy a simple Python Flask application using Terraform provisioners and SSH connection.
+# Terraform Flask Application Deployment Demo
+
+This project is intended as a hands-on DevOps learning project that uses Terraform to provision an AWS EC2 instance and deploy a simple Python Flask application using Terraform provisioners and SSH connection.This project demonstrates how Infrastructure as Code can be combined with application deployment and server provisioning.
 
 The application displays:
 
-## Hello Terraform!
+#### Hello Terraform!
 
-This project demonstrates how Infrastructure as Code can be combined with application deployment and server provisioning.
-
-# 📌 Project Overview
+## 📌 Project Overview
 
 The goal of this project is to automate the following process:
 
-Provision AWS infrastructure using Terraform.
-Create an EC2 instance.
-Connect to the EC2 instance using SSH.
-Install Python and Flask.
-Copy the Flask application to the EC2 instance.
-Start the Flask application.
-Access the application through the EC2 public IP.
+-Provision AWS infrastructure using Terraform.
+-Create an EC2 instance.
+-Connect to the EC2 instance using SSH.
+-Install Python and Flask.
+-Copy the Flask application to the EC2 instance.
+-Start the Flask application.
+-Access the application through the EC2 public IP.
 
 Instead of manually configuring the EC2 server, Terraform automates the deployment process.
 
+```text
 🏗️ Architecture
                     Internet
                        |
@@ -43,11 +42,12 @@ Instead of manually configuring the EC2 server, Terraform automates the deployme
                         |
                         v
                 "Hello Terraform!"
+```
 
-🚀 Deployment Workflow
+### 🚀 Deployment Workflow
 
 The deployment follows this process:
-
+```text
 Terraform Configuration
           |
           v
@@ -79,75 +79,68 @@ Port 80
           |
           v
 Web Browser
+```
 
-# ⚙️ Prerequisites
+## ⚙️ Prerequisites
 
-Before running this project, make sure the following are installed and configured:
+Before running this project, following needs to be installed and configured:
 
-Terraform
-AWS CLI
-Git
-An AWS account
-An SSH key pair
-An AWS IAM user/role with appropriate permissions
+-Terraform
+-AWS CLI
+-Git
+-An AWS account
+-An SSH key pair
+-An AWS IAM user/role with appropriate permissions
 
-Verify Terraform:
+1. Verify Terraform:
+    - `terraform --version`
+2. Verify AWS CLI:
+    - Run `aws --version`
+3. Configure Aws Account
+    - Run `aws configure`   
+4. Verify AWS authentication:
+    - Run `aws sts get-caller-identity`
 
-terraform version
-
-Verify AWS CLI:
-
-aws --version
-
-Verify AWS authentication:
-
-aws sts get-caller-identity
-
-# 🔍 Verify the Deployment
+## 🔍 Verify the Deployment
 
 After Terraform creates the EC2 instance, connect to it using SSH:
 
-ssh -i ~/.ssh/id_rsa ubuntu@<EC2_PUBLIC_IP>
+Run `ssh -i ~/.ssh/id_rsa ubuntu@<EC2_PUBLIC_IP>`
 
 Check that the application exists:
 
 ls -l /home/ubuntu/app.py
 
-Check the Flask installation:
-
-python3 -c "import flask; print(flask.__version__)"
-
 Start the application:
 
-sudo python3 /home/ubuntu/app.py
+Run `sudo python3 /home/ubuntu/app.py`
 
 Expected output:
-
+```text
 * Serving Flask app 'app'
 * Debug mode: off
 * Running on all addresses (0.0.0.0)
 * Running on http://127.0.0.1:80
-
-# 📚 What I Learned
+``` 
+## 📚 What I Learned
 
 This project helped me practice:
 
-Infrastructure as Code using Terraform
-AWS EC2 provisioning
-AWS networking fundamentals
-Security Groups
-SSH authentication
-Terraform connection blocks
-Terraform provisioners
-Remote command execution
-File provisioning
-Python Flask deployment
-Linux server administration
-Git and GitHub
-Troubleshooting application deployment issues
+-Infrastructure as Code using Terraform
+-AWS EC2 provisioning
+-AWS networking fundamentals
+-Security Groups
+-SSH authentication
+-Terraform connection blocks
+-Terraform provisioners
+-Remote command execution
+-File provisioning
+-Python Flask deployment
+-Linux server administration
+-Git and GitHub
+-Troubleshooting application deployment issues
 
-# 👨‍💻 Author
+#### 👨‍💻 Author
 
 Kajal Prajapati
-
 DevOps / Cloud Engineering Learning Project
